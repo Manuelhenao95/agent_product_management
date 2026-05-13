@@ -1,5 +1,7 @@
 # Contexto de empresa: [NOMBRE EMPRESA]
 
+> **Guía de uso:** Este archivo se llena una vez al iniciar operaciones de producto, se actualiza cada trimestre (o ante cambios estratégicos relevantes), y se referencia cada vez que se escribe un requerimiento, user story o business case. No es un documento decorativo: es la fuente de verdad que alinea al equipo.
+
 ---
 
 ## 1. Identidad
@@ -11,9 +13,10 @@
 | Sector / Industria | [COMPLETAR] |
 | Fundación | [COMPLETAR] |
 | Tamaño aproximado | [COMPLETAR — empleados, usuarios, volumen] |
-
-**Descripción:**
-[2-3 líneas que describan qué hace la empresa y qué la diferencia.]
+| Propuesta de valor | [2-3 líneas: qué hace y qué la diferencia] |
+| Misión | [COMPLETAR] |
+| Visión | [COMPLETAR] |
+| Valores clave | [COMPLETAR — separados por coma] |
 
 ---
 
@@ -24,6 +27,9 @@
 | [País 1] | Principal | [COMPLETAR] |
 | [País 2] | Activo | [COMPLETAR] |
 | [País 3] | En expansión | [COMPLETAR] |
+
+**Restricciones regulatorias por mercado** *(eliminar si no aplica):*
+[Ej: manejo de datos personales (GDPR / Habeas Data), regulación financiera, normativas sanitarias, licencias requeridas, restricciones de contenido.]
 
 ---
 
@@ -41,10 +47,10 @@
 
 ### Usuarios externos (clientes)
 
-| Segmento | Perfil | Necesidad principal |
-|----------|--------|-------------------|
-| [Segmento 1] | [Edad, comportamiento, contexto] | [Qué necesita resolver] |
-| [Segmento 2] | [COMPLETAR] | [COMPLETAR] |
+| Segmento | Perfil | Pain points | Jobs to be done | Necesidad principal |
+|----------|--------|-------------|-----------------|-------------------|
+| [Segmento 1] | [Edad, contexto, comportamiento] | [Qué le frustra o le cuesta hoy] | [Qué "trabajo" le encarga al producto] | [Qué necesita resolver] |
+| [Segmento 2] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
 
 ### Usuarios internos (operan el producto)
 
@@ -91,25 +97,23 @@
 
 ## 8. Competencia
 
-| Competidor | Tipo | Fortaleza principal |
-|------------|------|-------------------|
-| [Competidor 1] | [Directo / Indirecto] | [COMPLETAR] |
-| [Competidor 2] | [COMPLETAR] | [COMPLETAR] |
-| [Benchmark regional] | [COMPLETAR] | [COMPLETAR] |
+| Competidor | Tipo | Fortaleza principal | Nuestra ventaja frente a ellos |
+|------------|------|--------------------|---------------------------------|
+| [Competidor 1] | [Directo / Indirecto] | [COMPLETAR] | [COMPLETAR] |
+| [Competidor 2] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| [Benchmark regional] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
 
 ---
 
 ## 9. Métricas clave del negocio
 
-| Métrica | Descripción | Benchmark actual |
-|---------|-------------|-----------------|
-| [Métrica 1] | [COMPLETAR] | [COMPLETAR] |
-| [Métrica 2] | [COMPLETAR] | [COMPLETAR] |
-| [Métrica 3] | [COMPLETAR] | [COMPLETAR] |
+| Métrica | Descripción | Benchmark actual | Meta |
+|---------|-------------|-----------------|------|
+| [Métrica 1] | [COMPLETAR] | [COMPLETAR] | [TARGET] |
+| [Métrica 2] | [COMPLETAR] | [COMPLETAR] | [TARGET] |
+| [Métrica 3] | [COMPLETAR] | [COMPLETAR] | [TARGET] |
 
----
-
-## 10. Parámetros financieros
+**Contexto financiero** *(completar solo si el equipo realiza business cases o modelado financiero):*
 
 | Parámetro | Valor |
 |-----------|-------|
@@ -117,11 +121,9 @@
 | Horizonte de proyección | [COMPLETAR] |
 | Moneda principal | [COMPLETAR] |
 
-[Instrucciones adicionales para modelado financiero si aplica.]
-
 ---
 
-## 11. Tiers de proyecto
+## 10. Tiers de proyecto
 
 | Tier | Cuándo aplica | Documentos requeridos |
 |------|--------------|----------------------|
@@ -131,7 +133,7 @@
 
 ---
 
-## 12. Dónde guardar los documentos
+## 11. Dónde guardar los documentos
 
 | Tipo de documento | Ubicación |
 |-------------------|-----------|
@@ -141,8 +143,20 @@
 
 ---
 
-## 13. Estilo de comunicación
+## 12. Estilo de comunicación
 
-- **Idioma:** [COMPLETAR]
-- **Tono:** [COMPLETAR]
-- **Reglas:** [COMPLETAR — sin secciones vacías, tablas para comparaciones, etc.]
+- **Idioma principal:** [COMPLETAR]
+- **Tono general:** [COMPLETAR — ej: cercano y cálido / profesional y directo]
+
+**Vocabulario de marca:**
+
+| Decimos | No decimos |
+|---------|------------|
+| [Ej: "miembro"] | [Ej: "cliente"] |
+| [Ej: "pedir"] | [Ej: "ordenar"] |
+| [COMPLETAR] | [COMPLETAR] |
+
+**La marca NUNCA:** [COMPLETAR — ej: usa lenguaje agresivo, hace promesas de tiempo sin validar con operaciones, tutea en comunicación formal]
+
+**Reglas de formato para documentos de producto:**
+- [COMPLETAR — ej: sin secciones vacías, tablas para comparaciones, bullets para listas de más de 3 elementos]
