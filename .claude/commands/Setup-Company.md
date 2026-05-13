@@ -12,71 +12,73 @@ Lee la plantilla de referencia antes de generar:
 
 ---
 
-## Cuándo usar esta skill
-
-- El usuario quiere crear un archivo de contexto para su empresa
-- Necesita una plantilla para estandarizar la redacción de requerimientos
-- Quiere documentar el contexto de negocio que alimenta las decisiones de producto
-- Pide un PRD template, brief de producto o ficha empresarial orientada a producto
-
----
-
 ## Flujo de trabajo
 
-### Paso 1 — Recopilar información
+### Paso 1 — Obtener el nombre de la empresa
 
-Haz las preguntas en bloques, no una por una. Espera respuesta antes de continuar al siguiente bloque.
-
-**Bloque 1 — Identidad:**
-- ¿Cuál es el nombre de la empresa y su sitio web?
-- ¿En qué sector o industria opera?
-- ¿Cuál es su propuesta de valor principal?
-
-**Bloque 2 — Mercados y modelo:**
-- ¿En qué países o mercados opera? ¿Cuál es el principal?
-- ¿Hay mercados en expansión?
-- ¿Cuál es el modelo de negocio? (e-commerce, SaaS, marketplace, etc.)
-- ¿Cuáles son las palancas clave de retención o monetización?
-
-**Bloque 3 — Usuarios:**
-- ¿Quiénes son los usuarios principales? (perfil, edad, necesidad clave)
-- ¿Hay usuarios internos que interactúan con el producto? (domiciliarios, operadores, etc.)
-
-**Bloque 4 — Stack y equipos:**
-- ¿Qué herramientas usan para infra, datos, CRM y documentación?
-- ¿Cuáles son los equipos o áreas que participan en producto?
-
-**Bloque 5 — Roadmap:**
-- ¿Cuánto duran los sprints?
-- ¿Qué campos y estados tiene el roadmap?
-
-**Bloque 6 — Parámetros financieros:**
-- ¿Qué tasa de descuento o WACC usan para evaluar proyectos?
-- ¿Cuál es el horizonte de proyección estándar?
-
-**Bloque 7 — Tiers y documentos:**
-- ¿Usan tiers de proyecto? ¿Cómo los definen?
-- ¿Qué documentos requiere cada tier?
-- ¿Dónde se guardan los distintos tipos de documentos?
-
-**Bloque 8 — Marca y competencia:**
-- ¿Cuál es el tono de comunicación del equipo de producto?
-- ¿Cuáles son los competidores principales?
-- ¿Cuáles son las métricas clave del negocio?
+Pregunta únicamente: **¿Cuál es el nombre de la empresa y su sitio web (si lo tienes)?**
 
 ---
 
-### Paso 2 — Mostrar resumen y confirmar
+### Paso 2 — Búsqueda en línea
 
-Antes de generar, muestra al usuario un resumen estructurado de toda la información recopilada y pide confirmación explícita.
+Con el nombre de la empresa, realiza búsquedas web para pre-llenar el contexto automáticamente. Busca en este orden:
 
-Si el usuario quiere modificar algo, incorpora los cambios y muestra el resumen actualizado antes de continuar.
+1. Sitio web oficial de la empresa
+2. LinkedIn de la empresa
+3. Crunchbase o similares (para modelo de negocio, mercados, funding)
+4. Noticias recientes (para expansión, mercados, productos nuevos)
+
+**Campos a buscar:**
+- Sector / industria
+- Países o mercados donde opera
+- Modelo de negocio y propuesta de valor
+- Canales (app, web, tiendas físicas)
+- Usuarios principales (a quién le vende)
+- Competidores principales
+- Métricas o logros públicos relevantes
+
+**Regla:** Solo usa información que puedas confirmar con fuentes. Marca como `[COMPLETAR]` todo lo que no encuentres con certeza — nunca inventes datos.
 
 ---
 
-### Paso 3 — Generar los archivos
+### Paso 3 — Presentar hallazgos y completar gaps
 
-Con la confirmación del usuario, genera:
+Muestra al usuario lo que encontraste en formato de tabla organizada por sección. Ejemplo:
+
+> "Encontré esta información sobre [Empresa]. Revisa y dime qué corregir o agregar:"
+>
+> | Campo | Valor encontrado | Fuente |
+> |-------|-----------------|--------|
+> | Sector | Pet Commerce | laika.com.co |
+> | Mercados | Colombia, Chile | LinkedIn |
+> | ... | ... | ... |
+> | Stack tecnológico | [COMPLETAR] | No encontrado |
+
+Luego haz preguntas **solo para los campos que no pudiste encontrar** en línea, agrupadas en bloques:
+
+**Campos internos (no disponibles públicamente):**
+- Stack tecnológico (infra, datos, CRM, documentación)
+- Equipos o áreas que participan en producto
+- Duración de sprints y estructura del roadmap
+- Parámetros financieros (WACC, horizonte de proyección)
+- Tiers de proyecto y documentos requeridos por tier
+- Dónde se guardan los documentos
+- Tono de comunicación del equipo de producto
+
+---
+
+### Paso 4 — Confirmar antes de generar
+
+Muestra un resumen final consolidado (información web + respuestas del usuario) y pide confirmación explícita antes de escribir cualquier archivo.
+
+Si el usuario quiere modificar algo, actualiza el resumen y muéstralo de nuevo.
+
+---
+
+### Paso 5 — Generar los archivos
+
+Con confirmación del usuario, genera:
 
 **Archivo 1:** `.claude/context/company_context.md`
 Contexto resumido siguiendo la estructura actual del archivo. Lo usan todos los skills del flujo automáticamente.
@@ -98,3 +100,4 @@ Documento completo basado en `references/template.md` con:
 - **Tono:** profesional pero accesible, listo para usar por cualquier miembro del equipo
 - **Longitud del archivo 2:** entre 150 y 300 líneas
 - **No escribir los archivos** hasta tener confirmación explícita del usuario
+- **Citar fuentes** en la tabla de hallazgos para que el usuario pueda verificar
