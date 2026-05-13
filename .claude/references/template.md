@@ -1,140 +1,148 @@
-# Contexto de Requerimientos — [NOMBRE EMPRESA]
+# Contexto de empresa: [NOMBRE EMPRESA]
 
 ---
 
-## BLOQUE A — CONTEXTO EMPRESARIAL
-
-### 1. Identidad de la empresa
+## 1. Identidad
 
 | Campo | Valor |
 |-------|-------|
 | Nombre | [NOMBRE EMPRESA] |
 | Sitio web | [URL] |
 | Sector / Industria | [COMPLETAR] |
-| Mercado principal | [COMPLETAR] |
-| Otros mercados | [COMPLETAR] |
-| Modelo de negocio | [COMPLETAR] |
-| Propuesta de valor | [COMPLETAR] |
+| Fundación | [COMPLETAR] |
+| Tamaño aproximado | [COMPLETAR — empleados, usuarios, volumen] |
 
-### 2. Usuarios principales
+**Descripción:**
+[2-3 líneas que describan qué hace la empresa y qué la diferencia.]
 
-| Segmento | Descripción | Necesidad clave |
-|----------|-------------|-----------------|
-| [Segmento 1] | [Perfil demográfico y comportamental] | [Qué necesita resolver] |
+---
+
+## 2. Mercados
+
+| Mercado | Estado | Modelo de entrada |
+|---------|--------|------------------|
+| [País 1] | Principal | [COMPLETAR] |
+| [País 2] | Activo | [COMPLETAR] |
+| [País 3] | En expansión | [COMPLETAR] |
+
+---
+
+## 3. Modelo de negocio
+
+- **Tipo:** [e-commerce / SaaS / marketplace / D2C / otro]
+- **Canales de venta:** [web / app / tiendas físicas / B2B / otro]
+- **Modelo de ingresos:** [transaccional / suscripción / freemium / comisión / otro]
+- **Palancas de retención:** [COMPLETAR — membresía, loyalty, precio diferenciado, etc.]
+- **Palancas de monetización:** [COMPLETAR]
+
+---
+
+## 4. Usuarios
+
+### Usuarios externos (clientes)
+
+| Segmento | Perfil | Necesidad principal |
+|----------|--------|-------------------|
+| [Segmento 1] | [Edad, comportamiento, contexto] | [Qué necesita resolver] |
 | [Segmento 2] | [COMPLETAR] | [COMPLETAR] |
 
-**Usuarios internos que interactúan con el producto:**
-- [Rol interno 1] — [qué hace en el sistema]
-- [Rol interno 2] — [COMPLETAR]
+### Usuarios internos (operan el producto)
 
-### 3. Canales y plataformas
-
-| Canal | Estado | Notas |
-|-------|--------|-------|
-| Web | [Activo / En desarrollo / N/A] | [COMPLETAR] |
-| App móvil (iOS) | [Activo / En desarrollo / N/A] | [COMPLETAR] |
-| App móvil (Android) | [Activo / En desarrollo / N/A] | [COMPLETAR] |
-| Tiendas físicas | [Activo / En desarrollo / N/A] | [COMPLETAR] |
-| Otros | [COMPLETAR] | [COMPLETAR] |
-
-### 4. Stack tecnológico
-
-| Capa | Herramienta |
-|------|------------|
-| Infraestructura | [COMPLETAR] |
-| Datos / Analytics | [COMPLETAR] |
-| CRM / Marketing | [COMPLETAR] |
-| Documentación | [COMPLETAR] |
-| Otros relevantes | [COMPLETAR] |
-
-### 5. Equipos y áreas
-
-[Lista de equipos o áreas que participan en producto]
-
-- [Equipo 1]
-- [Equipo 2]
-- [COMPLETAR]
-
-### 6. Tono de marca y comunicación
-
-| Atributo | Descripción |
-|----------|-------------|
-| Tono general | [COMPLETAR — ej: cercano, técnico, formal] |
-| Idioma principal | [COMPLETAR] |
-| Estilo de documentación | [COMPLETAR — ej: directo, sin relleno, tablas para comparaciones] |
-
-**Competidores principales:**
-- [Competidor 1] — [fortaleza principal]
-- [Competidor 2] — [COMPLETAR]
-
-**Métricas clave del negocio:**
-- [Métrica 1] — [COMPLETAR]
-- [Métrica 2] — [COMPLETAR]
+| Rol | Descripción | Herramienta principal |
+|-----|-------------|----------------------|
+| [Rol 1] | [Qué hace] | [App / sistema que usa] |
+| [Rol 2] | [COMPLETAR] | [COMPLETAR] |
 
 ---
 
-## BLOQUE B — PLANTILLA DE REQUERIMIENTOS
+## 5. Stack tecnológico
 
-> Esta sección es la estructura repetible para cada nuevo requerimiento.
-> Convención de IDs: `REQ-[SIGLAS_EMPRESA]-[MÓDULO]-[###]`
-> Ejemplo: `REQ-LKA-ENTREGA-001`
-
----
-
-### 7. Encabezado del requerimiento
-
-| Campo | Valor |
-|-------|-------|
-| ID | `REQ-[SIGLAS]-[MÓDULO]-[###]` |
-| Nombre | [Nombre corto del requerimiento] |
-| Módulo / Área | [COMPLETAR] |
-| Tier | [S / M / L] |
-| Prioridad | [1 – 5] |
-| Estado | [Backlog / En definición / En curso / Finalizado] |
-| PM responsable | [COMPLETAR] |
-| Fecha | [COMPLETAR] |
-| Referencia | [Link al Opportunity Brief si existe] |
+| Capa | Herramienta | Uso |
+|------|------------|-----|
+| Infraestructura | [COMPLETAR] | [COMPLETAR] |
+| Datos / Analytics | [COMPLETAR] | [COMPLETAR] |
+| CRM / Marketing | [COMPLETAR] | [COMPLETAR] |
+| Pagos | [COMPLETAR] | [COMPLETAR] |
+| Documentación | [COMPLETAR] | [COMPLETAR] |
+| Apps propias | [COMPLETAR] | [COMPLETAR] |
+| Otros relevantes | [COMPLETAR] | [COMPLETAR] |
 
 ---
 
-### 8. Cuerpo del requerimiento
+## 6. Equipos
 
-#### Problema
-[Descripción clara del problema que resuelve este requerimiento. Quién se ve afectado, con qué frecuencia, con qué evidencia.]
+| Equipo / Área | Responsabilidad principal |
+|---------------|--------------------------|
+| [Equipo 1] | [COMPLETAR] |
+| [Equipo 2] | [COMPLETAR] |
+| [COMPLETAR] | [COMPLETAR] |
 
-#### User stories
+---
 
-```
-Como [tipo de usuario],
-quiero [acción o funcionalidad],
-para [beneficio o resultado esperado].
-```
+## 7. Roadmap y ciclos de trabajo
 
-| ID Story | User Story | Criterios de aceptación |
-|----------|------------|------------------------|
-| [REQ-XXX-001-US1] | Como [usuario]... | - [ ] [Criterio 1] |
-| | | - [ ] [Criterio 2] |
-| [REQ-XXX-001-US2] | Como [usuario]... | - [ ] [Criterio 1] |
+- **Duración del sprint:** [COMPLETAR]
+- **Campos del roadmap:** [COMPLETAR — Área, Prioridad, Status, Sprint, etc.]
+- **Áreas del roadmap:** [COMPLETAR]
+- **Flujo de estados:** [COMPLETAR — ej: Backlog → En proceso → Finalizado]
+- **Herramienta:** [Notion / Jira / Linear / otra]
 
-#### Reglas de negocio
+---
 
-1. [Regla 1 — condición o restricción del sistema]
-2. [Regla 2]
-3. [COMPLETAR]
+## 8. Competencia
 
-#### Riesgos y supuestos
+| Competidor | Tipo | Fortaleza principal |
+|------------|------|-------------------|
+| [Competidor 1] | [Directo / Indirecto] | [COMPLETAR] |
+| [Competidor 2] | [COMPLETAR] | [COMPLETAR] |
+| [Benchmark regional] | [COMPLETAR] | [COMPLETAR] |
 
-| Tipo | Descripción |
-|------|-------------|
-| Supuesto | [Qué debe ser verdad para que funcione] |
-| Riesgo | [Qué podría fallar o impactar negativamente] |
-| Dependencia | [Equipo, sistema o dato requerido] |
+---
 
-#### Checklist de pre-entrega
+## 9. Métricas clave del negocio
 
-- [ ] Criterios de aceptación verificados en staging
-- [ ] Eventos de tracking implementados
-- [ ] SAC informado si hay impacto en atención al cliente
-- [ ] Ops informado si hay impacto operativo
-- [ ] Rollback plan documentado
-- [ ] [Ítem específico del requerimiento]
+| Métrica | Descripción | Benchmark actual |
+|---------|-------------|-----------------|
+| [Métrica 1] | [COMPLETAR] | [COMPLETAR] |
+| [Métrica 2] | [COMPLETAR] | [COMPLETAR] |
+| [Métrica 3] | [COMPLETAR] | [COMPLETAR] |
+
+---
+
+## 10. Parámetros financieros
+
+| Parámetro | Valor |
+|-----------|-------|
+| WACC / Tasa de retorno | [COMPLETAR] |
+| Horizonte de proyección | [COMPLETAR] |
+| Moneda principal | [COMPLETAR] |
+
+[Instrucciones adicionales para modelado financiero si aplica.]
+
+---
+
+## 11. Tiers de proyecto
+
+| Tier | Cuándo aplica | Documentos requeridos |
+|------|--------------|----------------------|
+| S — Small | [COMPLETAR] | [COMPLETAR] |
+| M — Medium | [COMPLETAR] | [COMPLETAR] |
+| L — Large | [COMPLETAR] | [COMPLETAR] |
+
+---
+
+## 12. Dónde guardar los documentos
+
+| Tipo de documento | Ubicación |
+|-------------------|-----------|
+| [Tipo 1] | [COMPLETAR] |
+| [Tipo 2] | [COMPLETAR] |
+| [Tipo 3] | [COMPLETAR] |
+
+---
+
+## 13. Estilo de comunicación
+
+- **Idioma:** [COMPLETAR]
+- **Tono:** [COMPLETAR]
+- **Reglas:** [COMPLETAR — sin secciones vacías, tablas para comparaciones, etc.]

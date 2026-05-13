@@ -3,9 +3,7 @@ name: product-requirements-context
 description: "Genera un archivo de contexto empresarial completo para la creación de requerimientos de producto. Usa esta skill siempre que el usuario quiera crear un 'archivo de contexto', 'contexto de empresa', 'plantilla de requerimientos', 'PRD template', 'product requirements document', o cualquier documento base que establezca el contexto de una empresa para definir requerimientos de producto. También aplica cuando el usuario mencione 'brief de producto', 'ficha de empresa para producto', 'contexto para historias de usuario', o pida una plantilla reutilizable para documentar requerimientos alineados con la estrategia de una empresa. Funciona para cualquier empresa, industria o mercado."
 ---
 
-Tu tarea es recopilar el contexto de una empresa y generar dos archivos:
-1. `.claude/context/company_context.md` — contexto resumido que usan los skills del flujo de trabajo
-2. `contexto_requerimientos_[nombre_empresa].md` — documento completo de contexto + plantilla de requerimientos
+Tu tarea es recopilar el contexto de una empresa y escribirlo en `.claude/context/company_context.md`.
 
 Lee la plantilla de referencia antes de generar:
 @.claude/references/template.md
@@ -26,15 +24,15 @@ Con el nombre de la empresa, realiza búsquedas web para pre-llenar el contexto 
 
 1. Sitio web oficial de la empresa
 2. LinkedIn de la empresa
-3. Crunchbase o similares (para modelo de negocio, mercados, funding)
-4. Noticias recientes (para expansión, mercados, productos nuevos)
+3. Crunchbase o similares (modelo de negocio, mercados, tamaño)
+4. Noticias recientes (expansión, nuevos productos, resultados)
 
 **Campos a buscar:**
-- Sector / industria
-- Países o mercados donde opera
-- Modelo de negocio y propuesta de valor
-- Canales (app, web, tiendas físicas)
-- Usuarios principales (a quién le vende)
+- Sector / industria y tamaño aproximado
+- Países o mercados donde opera y modelo de entrada
+- Modelo de negocio, canales y palancas de retención
+- Usuarios principales (perfil, segmentos)
+- Stack tecnológico público (apps propias, herramientas mencionadas)
 - Competidores principales
 - Métricas o logros públicos relevantes
 
@@ -44,60 +42,50 @@ Con el nombre de la empresa, realiza búsquedas web para pre-llenar el contexto 
 
 ### Paso 3 — Presentar hallazgos y completar gaps
 
-Muestra al usuario lo que encontraste en formato de tabla organizada por sección. Ejemplo:
+Muestra al usuario lo que encontraste en formato de tabla con fuente:
 
 > "Encontré esta información sobre [Empresa]. Revisa y dime qué corregir o agregar:"
 >
 > | Campo | Valor encontrado | Fuente |
 > |-------|-----------------|--------|
-> | Sector | Pet Commerce | laika.com.co |
-> | Mercados | Colombia, Chile | LinkedIn |
-> | ... | ... | ... |
+> | Sector | [valor] | [fuente] |
+> | Mercados | [valor] | [fuente] |
 > | Stack tecnológico | [COMPLETAR] | No encontrado |
 
-Luego haz preguntas **solo para los campos que no pudiste encontrar** en línea, agrupadas en bloques:
+Luego pregunta **solo los campos que no encontraste**, agrupados en un solo bloque:
 
-**Campos internos (no disponibles públicamente):**
-- Stack tecnológico (infra, datos, CRM, documentación)
+- Stack tecnológico interno (infra, datos, CRM, documentación, apps propias)
 - Equipos o áreas que participan en producto
-- Duración de sprints y estructura del roadmap
-- Parámetros financieros (WACC, horizonte de proyección)
+- Duración de sprints y estructura del roadmap (campos, áreas, estados)
+- Parámetros financieros (WACC, horizonte de proyección, moneda)
 - Tiers de proyecto y documentos requeridos por tier
-- Dónde se guardan los documentos
+- Dónde se guardan los distintos tipos de documentos
 - Tono de comunicación del equipo de producto
 
 ---
 
 ### Paso 4 — Confirmar antes de generar
 
-Muestra un resumen final consolidado (información web + respuestas del usuario) y pide confirmación explícita antes de escribir cualquier archivo.
+Muestra el contexto completo consolidado (información web + respuestas del usuario) y pide confirmación explícita antes de escribir el archivo.
 
-Si el usuario quiere modificar algo, actualiza el resumen y muéstralo de nuevo.
-
----
-
-### Paso 5 — Generar los archivos
-
-Con confirmación del usuario, genera:
-
-**Archivo 1:** `.claude/context/company_context.md`
-Contexto resumido siguiendo la estructura actual del archivo. Lo usan todos los skills del flujo automáticamente.
-
-**Archivo 2:** `contexto_requerimientos_[nombre_empresa_en_minusculas].md`
-Documento completo basado en `references/template.md` con:
-- Bloque A completo con toda la información de la empresa
-- Bloque B con la plantilla de requerimientos personalizada al sector (ejemplos de user stories, KPIs y riesgos adaptados a la industria)
-- IDs con el formato `REQ-[SIGLAS_EMPRESA]-[MÓDULO]-[###]`
-- Campos sin información marcados como `[COMPLETAR]`
+Si el usuario quiere modificar algo, actualiza y muestra de nuevo.
 
 ---
 
-## Reglas de generación
+### Paso 5 — Generar el archivo
 
-- **Idioma:** genera en el mismo idioma que usa el usuario
-- **Ejemplos:** adapta user stories, KPIs y riesgos al sector específico de la empresa
-- **No inventar datos:** si no hay información confirmada, usa `[COMPLETAR]`
-- **Tono:** profesional pero accesible, listo para usar por cualquier miembro del equipo
-- **Longitud del archivo 2:** entre 150 y 300 líneas
-- **No escribir los archivos** hasta tener confirmación explícita del usuario
-- **Citar fuentes** en la tabla de hallazgos para que el usuario pueda verificar
+Con confirmación del usuario, escribe `.claude/context/company_context.md` siguiendo exactamente la estructura de `references/template.md`, completando todas las secciones con la información recopilada.
+
+Deja `[COMPLETAR]` en cualquier campo sin información confirmada.
+
+Confirma al usuario que el archivo fue escrito y que todos los skills en `.claude/commands/` ya lo leen automáticamente.
+
+---
+
+## Reglas
+
+- **No inventar datos** — si no hay información confirmada, usa `[COMPLETAR]`
+- **No escribir el archivo** hasta tener confirmación explícita
+- **Citar fuentes** en la tabla de hallazgos
+- **Idioma:** el mismo que usa el usuario
+- **Un solo archivo de salida:** `.claude/context/company_context.md`
