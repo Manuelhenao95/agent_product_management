@@ -1,58 +1,59 @@
-# Contexto de empresa: [Nombre de la empresa]
+# Contexto de empresa: Laika Mascotas
 
 ## Quiénes somos
-[Descripción breve de la empresa: qué hace, en qué industria opera, cuál es su propuesta de valor principal.]
+Laika Mascotas (laika.com.co) es una plataforma de e-commerce (web + app) con tiendas físicas especializada en mascotas. Su palanca principal de retención y precio diferenciado es la membresía **Laika+**.
 
 ## Mercados
-- **Principal:** [País o región principal]
-- **Secundario:** [Otros mercados activos]
-- **Expansión en curso:** [Mercados en proceso de entrada, si aplica]
+- **Principal:** Colombia
+- **Secundario:** Chile
+- **Expansión en curso:** México (modelo de franquicias)
 
 ## Modelo de negocio
-- [Descripción del modelo: e-commerce, SaaS, marketplace, etc.]
-- [Palancas clave de retención o monetización: membresía, suscripción, freemium, etc.]
+- E-commerce (web + app) con tiendas físicas
+- Membresía **Laika+** como palanca de retención y precio diferenciado
 
 ## Stack tecnológico
-- **Infra:** [Cloud provider, plataforma propia, etc.]
-- **Datos:** [Herramientas de analytics y data warehouse]
-- **CRM / Marketing:** [Herramientas de comunicación con usuarios]
-- **Documentación:** [Notion, Confluence, etc.]
-- **Otros:** [Cualquier herramienta crítica adicional]
+- **Infra:** E-commerce propietario + AWS
+- **Datos:** Databricks
+- **CRM:** CleverTap
+- **Documentación:** Notion
 
 ## Equipos
-[Lista de equipos o áreas que participan en producto: ej. Growth, Producto, Data, Operaciones, SAC, Finanzas, etc.]
+Growth, Producto, Data, Operaciones (Primera Milla, Última Milla), Tiendas, SAC, Finanzas.
 
 ## Roadmap
-- **Sprints:** [Duración de los ciclos, ej. 2 semanas]
-- **Campos:** [Campos del roadmap: Área, Prioridad, Status, Sprint, etc.]
-- **Áreas del roadmap:** [Lista de áreas que se trackean en el roadmap]
-- **Estados:** [Flujo de estados: ej. Backlog → En proceso → Finalizado]
+- **Sprints:** Ciclos de 2 semanas
+- **Campos:** Área, Prioridad (1–5), Status, Sprint
+- **Áreas:** Growth, Producto, Última Milla, Primera Milla, Inventarios, Tiendas físicas, Servicio al cliente, Payments, Finanzas, México, Legal, Web nueva, Otros
+- **Estados:** Backlog → Por hacer → Siguiente Sprint → En proceso → En validación → Finalizado
 
 ## Parámetros financieros
 | Parámetro | Valor |
 |-----------|-------|
-| WACC / Tasa de retorno | [ej. 16% anual] |
-| Horizonte de proyección | [ej. 3 años] |
+| WACC / Tasa de retorno | 16% anual |
+| Horizonte de proyección | 3 años |
 
-[Instrucciones adicionales para modelado financiero si aplica. Ej: usar VPN explícito de N años, no perpetuidad pura.]
+Para proyectos con flujos recurrentes, modelar los flujos explícitamente durante 3 años. No usar fórmulas de perpetuidad pura — usar el VPN de los 3 años como proxy del valor del proyecto.
 
 ## Tiers de proyecto
 | Tier | Cuándo aplica | Documentos requeridos |
 |------|--------------|----------------------|
-| S — Small | [Criterio] | [Documentos] |
-| M — Medium | [Criterio] | [Documentos] |
-| L — Large | [Criterio] | [Documentos] |
+| S — Small | Fix conocido, feature clara, bajo riesgo | Solo PRD (liviano) |
+| M — Medium | Feature con ambigüedad, impacto moderado | Opportunity Brief + PRD |
+| L — Large | Apuesta estratégica, alta incertidumbre | Ciclo completo |
 
-[Reglas adicionales sobre tiers si aplica.]
+Los proyectos Tier S van directo al PRD en Specs & Documentación (no requieren página en Proyectos).
 
-## Dónde guardar los documentos
-| Tipo de documento | Sección / Ubicación |
-|-------------------|---------------------|
-| [Tipo 1] | [Sección en Notion u otro sistema] |
-| [Tipo 2] | [Sección en Notion u otro sistema] |
-| [Tipo 3] | [Sección en Notion u otro sistema] |
+## Dónde guardar los documentos en Notion
+| Tipo de documento | Sección |
+|-------------------|---------|
+| Opportunity Brief, notas de entrevistas, user journeys | Discovery & Análisis |
+| PRD, Experiment Brief, Launch Checklist, Retrospectiva | Specs & Documentación |
+| Proyectos M y L (overview con links a todos los docs) | Proyectos |
+
+Para proyectos M y L: crear una página en Proyectos usando el template disponible, y linkear cada documento desde esa página además de guardarlo en su sección correspondiente.
 
 ## Estilo de comunicación
-- **Idioma:** [español / inglés / otro]
-- **Tono:** [directo y técnico / consultivo / formal, etc.]
-- **Reglas adicionales:** [Sin secciones vacías, sin relleno, etc.]
+- **Idioma:** Español
+- **Tono:** directo y técnico
+- **Reglas:** Sin secciones vacías, sin relleno
